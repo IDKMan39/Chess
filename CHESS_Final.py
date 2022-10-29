@@ -348,7 +348,6 @@ class Game:
                 self.kinghasmoves = True
                 return False
         self.kinghasmoves = False
-        print("No fucking legal squares, these can block")
         if incheckvar:
             print("currently in check, do I have empty squares around me?") 
             if len(self.attackingpeices) == 1:
@@ -366,7 +365,7 @@ class Game:
                             
             print(canblock)
             if len(canblock) == 0:
-                print("OH NO YOU GOT MATED HAHA BITCH")
+                print("OH NO YOU GOT MATED")
                 return True
             else :
                 return False
@@ -562,4 +561,3 @@ game.listener()
 
 
 
-#BUGS Im going to kill myself if there are any more bugs
