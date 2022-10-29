@@ -341,8 +341,6 @@ class Game:
         for i in moveset:
             if (kingpos[0] + i[0] in range(0,8) and kingpos[1] + i[1] in range(0,8)) and getattr(self.board[kingpos[0] + i[0]][kingpos[1]+i[1]],"color") != self.turn :
                 emptysquares.append((kingpos[0] + i[0],kingpos[1]+i[1]))
-                print("this mf has an empty square")
-            print()
         for i in emptysquares:
             #check if moving to this square is legal?
             if self.movepeiceto(self.currentking,kingpos,i,True):
